@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import './App.css';
-import ContactForm from './components/ContactForm/ContactForm';
+
 import SearchBox from './components/SearchBox/SearchBox';
+import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import contactsBase from './data/contacts.json';
 
 function App() {
-  console.log('hello');
-
   const [contacts, setContacts] = useState(() => {
     const contactsLocalStorage = window.localStorage.getItem('contacts');
     if (contactsLocalStorage === null) {
