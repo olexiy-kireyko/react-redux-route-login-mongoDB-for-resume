@@ -1,0 +1,18 @@
+.searchbox_wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.searchbox_label {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.searchbox_input {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+}

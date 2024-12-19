@@ -1,0 +1,45 @@
+.contactform {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 0 4px 3px;
+}
+
+.contactform_field {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.contactform_message_first {
+  color: red;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.contactform_message_second {
+  color: red;
+  position: absolute;
+  top: 146px;
+  right: 20px;
+}
+
+.contactform_btn {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: rgb(238, 217, 217);
+  height: 48px;
+  width: 200px;
+  text-align: center;
+  align-self: center;
+}

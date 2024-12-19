@@ -1,0 +1,36 @@
+.contact_card {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  min-width: 400px;
+  font-size: 18px;
+  box-shadow: 0 0 4px 3px;
+}
+
+.contact_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact_item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact_btn {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: rgb(238, 217, 217);
+  height: 48px;
+  width: 100px;
+  text-align: center;
+}
