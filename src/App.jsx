@@ -7,6 +7,8 @@ import ContactList from './components/ContactList/ContactList';
 import contactsBase from './data/contacts.json';
 
 function App() {
+  console.log('hello');
+
   const [contacts, setContacts] = useState(() => {
     const contactsLocalStorage = window.localStorage.getItem('contacts');
     if (contactsLocalStorage === null) {
