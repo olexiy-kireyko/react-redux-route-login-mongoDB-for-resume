@@ -33,4 +33,12 @@
   height: 48px;
   width: 100px;
   text-align: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.contact_btn:hover {
+  background-color: rgb(216, 153, 153);
+  box-shadow: 0 0 2px 2px;
+  cursor: pointer;
 }

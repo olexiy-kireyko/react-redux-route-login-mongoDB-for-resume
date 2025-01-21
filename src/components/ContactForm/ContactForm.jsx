@@ -3,8 +3,9 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import s from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
-import { nanoid } from 'nanoid';
+import { addContact } from '../../redux/contactsOps';
+import { FaRegAddressBook } from 'react-icons/fa';
+// import { nanoid } from 'nanoid';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -21,9 +22,7 @@ const ContactForm = () => {
       .required('Required'),
   });
   const handleAddContact = (values, actions) => {
-    dispatch(
-      addContact({ id: nanoid(5), name: values.name, number: values.number })
-    );
+    dispatch(addContact({ name: values.name, number: values.number }));
     actions.resetForm();
   };
 
@@ -59,7 +58,7 @@ const ContactForm = () => {
           className={s.contactform_message_second}
         />
         <button className={s.contactform_btn} type="submit">
-          Add contact
+          <FaRegAddressBook /> Add contact
         </button>
       </Form>
     </Formik>

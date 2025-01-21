@@ -2,7 +2,8 @@ import s from './Contact.module.css';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/contactsOps';
+import { MdDeleteForever } from 'react-icons/md';
 
 const Contact = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const Contact = ({ contact: { id, name, number } }) => {
           className={s.contact_btn}
           onClick={handleDeleteContact}
         >
+          <MdDeleteForever />
           Delete
         </button>
       </div>

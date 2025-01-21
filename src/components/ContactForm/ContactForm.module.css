@@ -40,6 +40,15 @@
   background-color: rgb(238, 217, 217);
   height: 48px;
   width: 200px;
-  text-align: center;
   align-self: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactform_btn:hover {
+  background-color: rgb(216, 153, 153);
+  box-shadow: 0 0 2px 2px;
+  cursor: pointer;
 }
