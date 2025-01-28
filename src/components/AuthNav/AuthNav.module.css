@@ -1,0 +1,24 @@
+.auth_nav {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.auth_nav_link {
+  color: black;
+  position: relative;
+}
+
+.auth_nav_link_active {
+  color: rgb(99, 48, 30);
+}
+
+.auth_nav_link_active::before {
+  content: '';
+  position: absolute;
+  top: 43px;
+  right: -10px;
+  width: 120%;
+  border: 1px solid rgb(99, 48, 30);
+}

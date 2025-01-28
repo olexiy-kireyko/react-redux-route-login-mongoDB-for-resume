@@ -1,11 +1,16 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: start;
 }
 
 h1 {
   font-size: 30px;
   font-weight: 600;
+}
+
+.app_loader {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

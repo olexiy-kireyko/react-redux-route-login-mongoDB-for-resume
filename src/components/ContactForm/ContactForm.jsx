@@ -3,9 +3,16 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import s from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 import { FaRegAddressBook } from 'react-icons/fa';
-// import { nanoid } from 'nanoid';
+import toast from 'react-hot-toast';
+
+const hotToastStyle = {
+  style: {
+    marginTop: '100px',
+    padding: '24px',
+  },
+};
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -22,8 +29,15 @@ const ContactForm = () => {
       .required('Required'),
   });
   const handleAddContact = (values, actions) => {
-    dispatch(addContact({ name: values.name, number: values.number }));
-    actions.resetForm();
+    dispatch(addContact({ name: values.name, number: values.number }))
+      .unwrap()
+      .then(() => {
+        actions.resetForm();
+        toast.success('add contact success', hotToastStyle);
+      })
+      .catch(() => {
+        toast.error('add contact error', hotToastStyle);
+      });
   };
 
   return (
@@ -39,6 +53,7 @@ const ContactForm = () => {
           type="text"
           name="name"
           id={nameId}
+          placeholder="enter contact's name"
         />
         <ErrorMessage
           name="name"
@@ -51,6 +66,7 @@ const ContactForm = () => {
           type="text"
           name="number"
           id={numberId}
+          placeholder="enter contact's number"
         />
         <ErrorMessage
           name="number"

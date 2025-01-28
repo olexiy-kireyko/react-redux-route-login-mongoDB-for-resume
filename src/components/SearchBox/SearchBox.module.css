@@ -1,8 +1,10 @@
 .searchbox_wrapper {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   font-weight: bold;
+  margin: 30px auto;
+  align-items: center;
 }
 
 .searchbox_label {
@@ -15,4 +17,9 @@
   border: 1px solid black;
   border-radius: 4px;
   padding: 10px 20px;
+}
+
+.searchbox_input::placeholder {
+  color: rgb(163, 152, 152);
+  font-weight: 300;
 }

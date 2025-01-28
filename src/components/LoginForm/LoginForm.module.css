@@ -1,4 +1,4 @@
-.contactform {
+.loginform {
   position: relative;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -11,35 +11,36 @@
   border-radius: 8px;
   font-size: 18px;
   box-shadow: 0 0 4px 3px;
-  margin: 0 auto;
+  align-self: center;
 }
 
-.contactform_field {
+.loginform_field {
   border: 1px solid black;
   border-radius: 4px;
   padding: 10px 20px;
+  width: 100%;
 }
 
-.contactform_field::placeholder {
+.loginform_field::placeholder {
   color: rgb(163, 152, 152);
   font-weight: 300;
 }
 
-.contactform_message_first {
+.loginform_message_first {
   color: red;
   position: absolute;
-  top: 30px;
+  top: 16px;
   right: 20px;
 }
 
-.contactform_message_second {
+.loginform_message_second {
   color: red;
   position: absolute;
-  top: 146px;
+  top: 112px;
   right: 20px;
 }
 
-.contactform_btn {
+.loginform_btn {
   padding: 10px;
   border: 1px solid grey;
   border-radius: 8px;
@@ -51,11 +52,17 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.contactform_btn:hover {
+.loginform_btn:hover {
   background-color: rgb(216, 153, 153);
   box-shadow: 0 0 2px 2px;
   cursor: pointer;
+}
+
+.loginform_form_eye {
+  position: absolute;
+  top: 148px;
+  right: 24px;
 }

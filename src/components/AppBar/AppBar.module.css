@@ -1,0 +1,23 @@
+.app_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b95f5f;
+  padding: 12px 24px;
+}
+
+@media (max-width: 768px) {
+  .app_bar {
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+  }
+
+  .app_bar::before {
+    content: '';
+    position: absolute;
+    top: 68px;
+    border: 1px solid rgb(99, 48, 30);
+    width: 96%;
+  }
+}

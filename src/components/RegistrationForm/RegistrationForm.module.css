@@ -1,4 +1,4 @@
-.contactform {
+.registration_form {
   position: relative;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -11,35 +11,43 @@
   border-radius: 8px;
   font-size: 18px;
   box-shadow: 0 0 4px 3px;
-  margin: 0 auto;
+  align-self: center;
 }
 
-.contactform_field {
+.registration_form_field {
   border: 1px solid black;
   border-radius: 4px;
   padding: 10px 20px;
+  width: 100%;
 }
 
-.contactform_field::placeholder {
+.registration_form_field::placeholder {
   color: rgb(163, 152, 152);
   font-weight: 300;
 }
 
-.contactform_message_first {
+.registration_form_message_first {
   color: red;
   position: absolute;
-  top: 30px;
+  top: 10px;
   right: 20px;
 }
 
-.contactform_message_second {
+.registration_form_message_second {
   color: red;
   position: absolute;
-  top: 146px;
+  top: 106px;
   right: 20px;
 }
 
-.contactform_btn {
+.registration_form_message_third {
+  color: red;
+  position: absolute;
+  top: 204px;
+  right: 20px;
+}
+
+.registration_form_btn {
   padding: 10px;
   border: 1px solid grey;
   border-radius: 8px;
@@ -51,11 +59,17 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.contactform_btn:hover {
+.registration_form_btn:hover {
   background-color: rgb(216, 153, 153);
   box-shadow: 0 0 2px 2px;
   cursor: pointer;
+}
+
+.registration_form_eye {
+  position: absolute;
+  top: 246px;
+  right: 24px;
 }

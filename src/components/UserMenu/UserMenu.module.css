@@ -1,0 +1,26 @@
+.usermenu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.usermenu_btn {
+  padding: 4px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: rgb(238, 217, 217);
+  width: 120px;
+  align-self: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.usermenu_btn:hover {
+  background-color: rgb(216, 153, 153);
+  box-shadow: 0 0 2px 2px;
+  cursor: pointer;
+}
