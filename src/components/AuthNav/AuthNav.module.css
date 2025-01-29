@@ -22,3 +22,8 @@
   width: 120%;
   border: 1px solid rgb(99, 48, 30);
 }
+@media (max-width: 768px) {
+  .auth_nav_link_active::before {
+    top: 40px;
+  }
+}

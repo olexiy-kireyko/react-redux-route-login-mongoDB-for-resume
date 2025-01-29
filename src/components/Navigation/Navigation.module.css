@@ -26,6 +26,6 @@
 
 @media (max-width: 768px) {
   .navigation_link_active::before {
-    top: -8px;
+    top: -12px;
   }
 }

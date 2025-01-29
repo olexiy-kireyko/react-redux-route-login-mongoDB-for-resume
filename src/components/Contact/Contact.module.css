@@ -11,6 +11,11 @@
   font-size: 18px;
   box-shadow: 0 0 4px 3px;
 }
+@media (max-width: 768px) {
+  .contact_card {
+    min-width: 300px;
+  }
+}
 
 .contact_list {
   display: flex;
