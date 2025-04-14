@@ -33,14 +33,23 @@ const authSlice = createSlice({
       .addCase(refreshUser.rejected, state => {
         state.isRefreshing = false;
       })
-      .addMatcher(
-        isAnyOf(register.fulfilled, login.fulfilled),
-        (state, action) => {
-          state.user = action.payload.user;
-          state.token = action.payload.token;
-          state.isLoggedIn = true;
-        }
-      );
+      // .addMatcher(
+      //   isAnyOf(register.fulfilled, login.fulfilled),
+      //   (state, action) => {
+      //     state.user = action.payload.user;
+      //     state.token = action.payload.token;
+      //     state.isLoggedIn = true;
+      //   }
+      // )
+      .addCase(register.fulfilled, (state, action) => {
+        state.user = action.payload.user;
+        state.isLoggedIn = false;
+      })
+      .addCase(login.fulfilled, (state, action) => {
+        state.user = action.payload.user;
+        state.token = action.payload.accessToken;
+        state.isLoggedIn = true;
+      });
   },
 });
 
