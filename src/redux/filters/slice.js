@@ -1,10 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 const slice = createSlice({
   name: 'filters',
-  initialState: { name: '' },
+  initialState: {
+    name: '',
+    isFavourite: 'all',
+    contactType: 'all',
+  },
   reducers: {
     changeFilter(state, action) {
-      state.name = action.payload;
+      state.name = action.payload.name;
+      state.isFavourite = action.payload.isFavourite;
+      state.contactType = action.payload.contactType;
     },
   },
 });

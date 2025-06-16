@@ -5,21 +5,123 @@
   font-weight: bold;
   margin: 30px auto;
   align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  max-width: 400px;
+}
+@media (max-width: 768px) {
+  .searchbox_wrapper {
+    min-width: 300px;
+  }
 }
 
 .searchbox_label {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  align-items: center;
+  /* width: 300px; */
+  padding: 16px;
+  border: 1px solid rgb(128, 110, 110);
+  border-radius: 8px;
 }
 
 .searchbox_input {
-  border: 1px solid black;
+  border: 1px solid rgb(128, 110, 110);
   border-radius: 4px;
   padding: 10px 20px;
+  background-color: antiquewhite;
 }
 
 .searchbox_input::placeholder {
   color: rgb(163, 152, 152);
   font-weight: 300;
+}
+.searchbox_checkbox_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px;
+  border: 1px solid rgb(128, 110, 110);
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.searchbox_field_radio_wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.searchbox_checkbox {
+  cursor: pointer;
+  margin-left: 20px;
+}
+.searchbox_radio_wrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid rgb(128, 110, 110);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.searchbox_field_radio_label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.searchbox_field_radio {
+  border: 1px solid black;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  margin-left: 4px;
+}
+.searchbox_field_radio:checked {
+  background-color: #832b2b;
+}
+.searchbox_btn {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: rgb(238, 217, 217);
+  height: 48px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.searchbox_btn:hover {
+  background-color: rgb(216, 153, 153);
+  box-shadow: 0 0 2px 2px;
+  cursor: pointer;
+}
+
+.searchbox_btn_break {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: rgb(105, 204, 158);
+  height: 48px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.searchbox_btn_break:hover {
+  background-color: rgb(45, 150, 101);
+  box-shadow: 0 0 2px 2px;
+  cursor: pointer;
 }

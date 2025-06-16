@@ -25,19 +25,20 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.error = null;
         state.items = action.payload;
+        console.log('action.payload in slice', action.payload);
       })
 
       .addCase(addContact.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.items.push(action.payload);
+        state.items.push(action.payload.data);
       })
 
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
         const index = state.items.findIndex(
-          item => item.id === action.payload.id
+          item => item._id === action.payload._id
         );
         state.items.splice(index, 1);
       })
@@ -52,12 +53,15 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.error = null;
         const index = state.items.findIndex(
-          item => item.id === action.payload.id
+          item => item._id === action.payload._id
         );
         state.items.splice(index, 1, {
-          id: action.payload.id,
+          _id: action.payload._id,
           name: action.payload.name,
-          number: action.payload.number,
+          phoneNumber: action.payload.phoneNumber,
+          email: action.payload.email,
+          isFavourite: action.payload.isFavourite,
+          contactType: action.payload.contactType,
         });
       })
 

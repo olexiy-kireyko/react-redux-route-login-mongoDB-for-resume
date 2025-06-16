@@ -12,6 +12,10 @@
   justify-content: center;
 }
 
+.navigation_link:hover {
+  color: rgb(99, 48, 30);
+}
+
 .navigation_link_active {
   color: rgb(99, 48, 30);
 }

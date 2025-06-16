@@ -33,8 +33,25 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: center;
 }
-
+.contact_photo_wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.contact_photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
 .contact_btn {
   padding: 10px;
   border: 1px solid grey;
@@ -114,7 +131,62 @@ body:has(.editform_container) {
   top: 146px;
   right: 20px;
 }
+.editform_message_third {
+  color: red;
+  position: absolute;
+  top: 246px;
+  right: 20px;
+}
 
+.editform_field_checkbox_wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+.editform_field_checkbox {
+  cursor: pointer;
+  margin-left: 20px;
+}
+.editform_field_radio_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.editform_field_radio_label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.editform_field_radio {
+  border: 1px solid black;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  margin-left: 4px;
+}
+.editform_field_radio:checked {
+  background-color: #832b2b;
+}
+.editform_photo_label {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: rgb(155, 219, 195);
+  /* height: 48px; */
+  width: 240px;
+  align-self: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-align: center;
+}
+.editform_photo_label:hover {
+  background-color: rgb(114, 185, 156);
+  box-shadow: 0 0 2px 2px;
+  cursor: pointer;
+}
 .editform_btn {
   padding: 10px;
   border: 1px solid grey;
