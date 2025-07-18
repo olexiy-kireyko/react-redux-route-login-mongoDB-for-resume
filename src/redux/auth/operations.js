@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// axios.defaults.baseURL = 'https://connections-api.goit.global';
 axios.defaults.baseURL = 'https://contacts-app-5xxi.onrender.com';
 
 const setAuthHeader = token => {
@@ -15,14 +14,11 @@ export const register = createAsyncThunk(
   'auth/register',
   async (body, thunkAPI) => {
     try {
-      // const response = await axios.post('/users/signup', body);
-      console.log('register body', body);
       const response = await axios.post('auth/register', body);
-      // setAuthHeader(response.data.token);
+
       //  !
       setAuthHeader(response.data.accessToken);
       //  !
-      console.log('register resp', response);
 
       return response.data;
     } catch (e) {
@@ -34,7 +30,6 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk('auth/login', async (body, thunkAPI) => {
   try {
     const response = await axios.post('/auth/login', body);
-    // setAuthHeader(response.data.token);
     setAuthHeader(response.data.accessToken);
     return response.data;
   } catch (e) {
@@ -44,7 +39,6 @@ export const login = createAsyncThunk('auth/login', async (body, thunkAPI) => {
 
 export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
-    // await axios.post('/users/logout');
     await axios.post('/auth/logout');
     clearAuthHeader();
   } catch (e) {
@@ -63,7 +57,7 @@ export const refreshUser = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      // const response = await axios.get('/users/current');
+
       const response = await axios.post('/auth/refresh');
       return response.data;
     } catch (e) {

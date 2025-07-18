@@ -190,7 +190,7 @@ const Contact = ({
           </button>
           <button
             type="button"
-            className={s.contact_btn}
+            className={`${s.contact_btn} ${s.delete}`}
             onClick={handleFirstClickDeleteContact}
           >
             <MdDeleteForever />
@@ -368,7 +368,7 @@ const Contact = ({
               Do you sure you want to delete contact: {deleteContactData.name}?
             </p>
             <button
-              className={s.deleteform_btn}
+              className={`${s.deleteform_btn} ${s.delete}`}
               type="button"
               onClick={handleSecondClickDeleteContact}
             >

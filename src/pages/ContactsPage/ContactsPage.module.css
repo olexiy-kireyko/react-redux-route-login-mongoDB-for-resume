@@ -24,6 +24,10 @@
   gap: 8px;
   justify-content: center;
   margin: 8px;
+  @media (max-width: 465px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .contacts_page_btn_contactform {
   padding: 10px;
@@ -66,4 +70,15 @@
   background-color: rgb(216, 153, 153);
   box-shadow: 0 0 2px 2px;
   cursor: pointer;
+}
+
+.contacts_page_form_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

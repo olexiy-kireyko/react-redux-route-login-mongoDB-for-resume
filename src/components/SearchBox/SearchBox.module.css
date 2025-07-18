@@ -3,11 +3,13 @@
   flex-direction: column;
   font-size: 18px;
   font-weight: bold;
-  margin: 30px auto;
   align-items: center;
+  justify-content: center;
   border: 1px solid black;
   border-radius: 8px;
   max-width: 400px;
+  height: auto;
+  flex-grow: 0;
 }
 @media (max-width: 768px) {
   .searchbox_wrapper {
@@ -15,14 +17,27 @@
   }
 }
 
+.searchbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .searchbox_label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 300px; */
   padding: 16px;
   border: 1px solid rgb(128, 110, 110);
   border-radius: 8px;
+  margin: 0 auto;
+  min-width: 90%;
+  @media (max-width: 465px) {
+    padding: 4px;
+    font-size: medium;
+    width: 94%;
+  }
 }
 
 .searchbox_input {
@@ -36,6 +51,7 @@
   color: rgb(163, 152, 152);
   font-weight: 300;
 }
+
 .searchbox_checkbox_wrapper {
   display: flex;
   flex-direction: column;
@@ -45,8 +61,13 @@
   padding: 16px;
   border: 1px solid rgb(128, 110, 110);
   border-radius: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 8px auto;
+  min-width: 90%;
+  @media (max-width: 465px) {
+    padding: 4px;
+    font-size: medium;
+    width: 94%;
+  }
 }
 .searchbox_field_radio_wrapper {
   display: flex;
@@ -57,6 +78,7 @@
   cursor: pointer;
   margin-left: 20px;
 }
+
 .searchbox_radio_wrapper {
   display: flex;
   gap: 8px;
@@ -66,7 +88,13 @@
   padding: 16px;
   border: 1px solid rgb(128, 110, 110);
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin: 0 auto 8px;
+  width: 94%;
+  @media (max-width: 465px) {
+    padding: 4px;
+    font-size: medium;
+    width: 98%;
+  }
 }
 
 .searchbox_field_radio_label {
@@ -74,6 +102,15 @@
   display: flex;
   align-items: center;
 }
+
+.searchbox_field_radio_label:not(:last-child)::after {
+  content: '';
+  margin-left: 6px;
+  width: 1px;
+  height: 32px;
+  border: 1px solid #832b2b;
+}
+
 .searchbox_field_radio {
   border: 1px solid black;
   width: 16px;
@@ -90,13 +127,17 @@
   border-radius: 8px;
   background-color: rgb(238, 217, 217);
   height: 48px;
-  width: 100%;
   text-align: center;
   display: flex;
   gap: 8px;
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  @media (max-width: 465px) {
+    padding: 4px;
+    font-size: medium;
+    width: 94%;
+  }
 }
 .searchbox_btn:hover {
   background-color: rgb(216, 153, 153);
@@ -110,7 +151,7 @@
   border-radius: 8px;
   background-color: rgb(105, 204, 158);
   height: 48px;
-  width: 90%;
+
   text-align: center;
   display: flex;
   gap: 8px;
@@ -118,6 +159,11 @@
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 8px;
+  @media (max-width: 465px) {
+    padding: 4px;
+    font-size: medium;
+    width: 94%;
+  }
 }
 
 .searchbox_btn_break:hover {

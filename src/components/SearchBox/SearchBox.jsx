@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import s from './SearchBox.module.css';
 import { changeFilter } from '../../redux/filters/slice';
 import { Field, Form, Formik } from 'formik';
-// import formik from 'formik';
+
 import { TbHeartQuestion } from 'react-icons/tb';
 import { FaHeart, FaHeartBroken } from 'react-icons/fa';
 import { MdFilterAlt, MdFilterAltOff } from 'react-icons/md';
@@ -10,19 +10,19 @@ import { MdFilterAlt, MdFilterAltOff } from 'react-icons/md';
 const SearchBox = () => {
   const dispatch = useDispatch();
   const handleFilterValue = values => {
-    let isFavourite;
+    let valueIsFavourite;
     if (values.isFavourite === 'true') {
-      isFavourite = true;
-    }
-    if (values.isFavourite === 'false') {
-      isFavourite = false;
+      valueIsFavourite = true;
+    } else if (values.isFavourite === 'false') {
+      valueIsFavourite = false;
     } else {
-      isFavourite = 'all';
+      valueIsFavourite = 'all';
     }
+
     dispatch(
       changeFilter({
         name: values.name.trim(),
-        isFavourite,
+        isFavourite: valueIsFavourite,
         contactType: values.contactType,
       })
     );
@@ -50,7 +50,7 @@ const SearchBox = () => {
         onSubmit={handleFilterValue}
         onReset={handleBreakFilters}
       >
-        <Form>
+        <Form className={s.searchbox}>
           <label className={s.searchbox_label}>
             - name/number/email
             <Field
@@ -149,11 +149,11 @@ const SearchBox = () => {
           </label>
 
           <button className={s.searchbox_btn} type="submit">
-            <MdFilterAlt /> click here to filter contacts
+            <MdFilterAlt /> click to filter contacts
           </button>
 
           <button className={s.searchbox_btn_break} type="reset">
-            <MdFilterAltOff /> click here to break all filters
+            <MdFilterAltOff /> click to break all filters
           </button>
         </Form>
       </Formik>

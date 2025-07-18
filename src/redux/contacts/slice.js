@@ -25,7 +25,6 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.error = null;
         state.items = action.payload;
-        console.log('action.payload in slice', action.payload);
       })
 
       .addCase(addContact.fulfilled, (state, action) => {
@@ -62,6 +61,7 @@ const contactsSlice = createSlice({
           email: action.payload.email,
           isFavourite: action.payload.isFavourite,
           contactType: action.payload.contactType,
+          photo: action.payload.photo,
         });
       })
 

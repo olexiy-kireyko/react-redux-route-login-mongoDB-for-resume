@@ -72,8 +72,10 @@ const ContactsPage = () => {
           </button>
         </div>
 
-        {isShowContactForm && <ContactForm />}
-        {isShowSearchBox && <SearchBox />}
+        <div className={s.contacts_page_form_box}>
+          {isShowContactForm && <ContactForm />}
+          {isShowSearchBox && <SearchBox />}
+        </div>
         {loading && (
           <div className={s.contacts_loader}>
             <DNA
